@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYROX | EVENT TECH [INCHEON]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hyrox-yellow: #ffed00;
+            --hyrox-black: #000000;
+            --hyrox-grey: #262626;
+            --hyrox-border: #999999;
+        }
+
+        body {
+            background-color: var(--hyrox-black);
+            color: #ffffff;
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* CONSTRAINED BANNER */
+        .hero-banner {
+            width: 100%;
+            height: 280px; 
+            background-color: #1a1a1a;
+            border-bottom: 3px solid var(--hyrox-yellow);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* MAIN CONTENT CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--hyrox-yellow);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        p.intro {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--hyrox-yellow);
+            margin-top: 50px;
+        }
+
+        /* Accordion Style */
+        .accordion {
+            background: var(--hyrox-grey);
+            margin-bottom: 10px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 15px 20px;
+            background: #1a1a1a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border-left: 5px solid var(--hyrox-yellow);
+        }
+
+        .accordion-header:hover { background: #333; }
+
+        .accordion-content {
+            padding: 20px;
+            display: none;
+            background: var(--hyrox-grey);
+            border-top: 1px solid #444;
+        }
+
+        .accordion-content a {
+            color: var(--hyrox-yellow);
+            text-decoration: underline;
+            word-break: break-all;
+        }
+
+        .note {
+            display: block;
+            margin-bottom: 10px;
+            font-style: italic;
+            color: var(--hyrox-yellow);
+            font-weight: bold;
+        }
+
+        .logistics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .logistics-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .logistics-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--hyrox-yellow);
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #444;
+        }
+
+        tr:nth-child(even) { background: #2a2a2a; }
+
+        .screen-link-item {
+            margin-bottom: 15px;
+        }
+        .screen-link-title {
+            display: block;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero-banner">
+    <img src="et-logo.png" alt="HYROX EVENT TECH BANNER">
+</section>
+
+<div class="container">
+    <h1>Event Tech Page – INCHEON (15.05 - 17.05)</h1>
+    <p class="intro">Welcome to the Event Tech Page for Incheon, South Korea</p>
+
+    <h3>Event Overview</h3>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('floor-map')">
+            🔗 to Floor Map <span>+</span>
+        </div>
+        <div class="accordion-content" id="floor-map">
+            <p>The 🔗 to the Floor Map is <a href="https://drive.google.com/file/d/1RXmo2qOr_Fn2NyMuMQuCEHVB0qIoB_31/view?usp=sharing" target="_blank">HERE</a></p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('loop-channel')">
+            🔗 to Loop Channel Assignment <span>+</span>
+        </div>
+        <div class="accordion-content" id="loop-channel">
+            <p>The 🔗 to the Loop Channel Assignment is <a href="https://docs.google.com/spreadsheets/d/1Z4xVx2gqcWqaX_h2xDgRBTwDiTzK9ypVRiJNqTCVAbs/edit?gid=1859407394#gid=1859407394" target="_blank">HERE</a></p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('run-calculator')">
+            🔗 to Run Course Calculator <span>+</span>
+        </div>
+        <div class="accordion-content" id="run-calculator">
+            <p>The 🔗 to the Run Course Calculator is <a href="https://docs.google.com/spreadsheets/d/1dMXnR9cGa8LomWw3NkOzfbEE2TMNXhejnh6oTTqMETg/edit?gid=1020076313#gid=1020076313" target="_blank">HERE</a></p>
+            <span class="note">Note: 3 lap readings on run 1 and 2 on every other lap</span>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('wave-start')">
+            🔗 to Wave Start Spreadsheet <span>+</span>
+        </div>
+        <div class="accordion-content" id="wave-start">
+            <p>The 🔗 to the Wave Start Spreadsheet is <a href="https://drive.google.com/file/d/1CXuu7WQW1wVxGk8OO8x3dFU81kZnLOjH/view" target="_blank">HERE</a></p>
+        </div>
+    </div>
+
+    <h3>Tech</h3>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('remote-sessions')">
+            Remote Sessions <span>+</span>
+        </div>
+        <div class="accordion-content" id="remote-sessions">
+            <p>The 🔗 to the Webresults sheet is <a href="https://docs.google.com/spreadsheets/d/1FWcLjGaQb46gH75hjLZFEiSf4DSFWtBRrUxOduGFez4/edit?gid=682272386#gid=682272386" target="_blank">HERE</a></p>
+            <span class="note">Config: 3</span>
+            <table>
+                <thead>
+                    <tr>
+                        <th>RDP / Address</th>
+                        <th>Assignment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>rdp4hyrox27</td><td>TFCC web + photo</td></tr>
+                    <tr><td>ICN TFCC</td><td>TFCC DB + Screen</td></tr>
+                    <tr><td>rdp4hyrox14</td><td>James</td></tr>
+                    <tr><td>rdp4hyrox15</td><td>Harry</td></tr>
+                    <tr><td>rdp4hyrox16</td><td>Stewart</td></tr>
+                    <tr><td>rdp4hyrox17</td><td>Reza</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('screen-links')">
+            Screen Links <span>+</span>
+        </div>
+        <div class="accordion-content" id="screen-links">
+            <span class="note">Config 3:</span>
+            <div class="screen-link-item">
+                <span class="screen-link-title">Lap Screen</span>
+                <a href="https://hyrox-screens.r.mikatiming.com/?pid=tfd_screen_config_3&lang=EN_CAP" target="_blank">View Screen</a>
+            </div>
+            <div class="screen-link-item">
+                <span class="screen-link-title">Finish Screen (Nat.)</span>
+                <a href="https://hyrox-screens.r.mikatiming.com/?pid=tfd_screen_finish_nat_config_3&lang=EN_CAP" target="_blank">View Screen</a>
+            </div>
+            <div class="screen-link-item">
+                <span class="screen-link-title">Photo Screen 1 (Vertical)</span>
+                <a href="https://hyrox-screens.r.mikatiming.com/?pid=selfietime_vertical_config_3&lang=EN_CAP" target="_blank">View Screen</a>
+            </div>
+             <div class="screen-link-item">
+                <span class="screen-link-title">Photo Screen 2 (Vertical)</span>
+                <a href="https://hyrox-screens.r.mikatiming.com/?pid=selfietime_vertical_config_3_3&lang=EN_CAP" target="_blank">View Screen</a>
+            </div>
+            <div class="screen-link-item">
+                <span class="screen-link-title">Ceremony Screen</span>
+                <a href="https://hyrox-screens.r.mikatiming.com/?pid=ceremony_screen_config_3&lang=EN_CAP" target="_blank">View Screen</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('wall-balls')">
+            Wall Balls <span>+</span>
+        </div>
+        <div class="accordion-content" id="wall-balls">
+            <span class="note">Digital targets provided: 64 (Max)</span>
+        </div>
+    </div>
+
+    <h3>Team and Logistics</h3>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('prereg')">
+            Prereg <span>+</span>
+        </div>
+        <div class="accordion-content" id="prereg">
+            <ul class="logistics-list">
+                <li><strong>Pre-reg day 1 - PUMA:</strong> 14/05/2026, 11:30am-8pm</li>
+            </ul>
+            <p class="note" style="margin-top: 15px;">Coordinated by: Rohan + Brian</p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('shift-plan')">
+            Shift Plan <span>+</span>
+        </div>
+        <div class="accordion-content" id="shift-plan">
+            <span class="note">TBD</span>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('chips')">
+            Chips <span>+</span>
+        </div>
+        <div class="accordion-content" id="chips">
+            <p><strong>Incoming:</strong></p>
+            <ul class="logistics-list">
+                <li>3200 from HK with Rohan</li>
+                <li>1000 chips on route</li>
+                <li>2500 with EFM</li>
+            </ul>
+            <p><strong>Outgoing:</strong></p>
+            <ul class="logistics-list">
+                <li>3200 to HK with Rohan</li>
+                <li>1000 chips on route</li>
+                <li>2500 with EFM</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('timing-logistics')">
+            RaceResult Timing + Wall Balls <span>+</span>
+        </div>
+        <div class="accordion-content" id="timing-logistics">
+            <p><strong>Status:</strong> With EFM</p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('network')">
+            Network <span>+</span>
+        </div>
+        <div class="accordion-content" id="network">
+            <p><strong>Status:</strong> Brought from HK by James/Stewart</p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion('inventory')">
+            Inventory <span>+</span>
+        </div>
+        <div class="accordion-content" id="inventory">
+            <p>The 🔗 to the Inventory sheet is <a href="https://docs.google.com/spreadsheets/d/1JMlkQguUmbiTYXNGrfLpVmxekoj6HC1PzkG6qDUAYCE/edit?gid=1748085731#gid=1748085731" target="_blank">HERE</a></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleAccordion(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
